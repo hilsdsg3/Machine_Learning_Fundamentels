@@ -24,6 +24,6 @@ The threshold of the above equation is important and is in this case the minimum
 <img src="https://latex.codecogs.com/svg.latex?\Large&space;{\color{Red} h}(x)=sign({\color{Red} w_T}x)" title="\Large {\color{Red} h}(x)=sign({\color{Red} w_T}x)"/>
 3. Obtain the sign of h(x) for all the points.
 4. Pick at random a misclassified point where :
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;sign({\color{Red} w_T}x)\neq y_n" title="\Large sign({\color{Red} w_T}x)\neq y_n"/>
+<img src="https://latex.codecogs.com/svg.latex?\Large&space;sign({\color{Red} w_T}x)\neq y_n"/>
 
 
