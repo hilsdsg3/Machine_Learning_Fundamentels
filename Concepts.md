@@ -14,7 +14,7 @@ To approve/disapprove someone for credit based the given set of data.
 This data is has already been classified as approve/disapprove and will be used as the training data for the trendline  
 For example the salary and previous deliquencies are the charateristics .... x1, x2. Also with this training set you have the approve/disapprove data as "y". Y is usually binary as in 1 (approve) or 0 disapprove. 
 #### Main equation : Linear formula 
-<img src="https://latex.codecogs.com/svg.latex?\Large&space;{\color{Red} h}(x)=sign((\sum_{i=1}^{d}{\color{Red} w_i}x_x)-{\color{Red} threshold})" title="\Large {\color{Red} h}(x)=sign((\sum_{i=1}^{d}{\color{Red} w_i}x_x)-{\color{Red} threshold})"/>
+<img src="https://latex.codecogs.com/svg.latex?{\color{Red} h}(x)=sign((\sum_{i=1}^{d}{\color{Red} w_i}x_x)-{\color{Red} threshold})"/>
 #### Example :
 For x = (x_1,...,x_d) attributes (dimensions) of a customer, 
 approve/disapprove if h(x) is positive/negative. 
