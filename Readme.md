@@ -10,7 +10,10 @@ This serves as notes from various instructions that I have received.
   <summary>Basic Learning Diagram</summary>
 <p align="center"><img width=40% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Basic_Learning_Problem_Diagram.bmp"></p>
 </details>
-https://github.com/hilsdsg3/Econometric_data/blob/master/meta_data/media/Bull_bear.jpg
+
+<details>
+  <summary>Linear Perceptron classification algorithm</summary>
+  
 #### Linear Perceptron classification algorithm
 Purpose : Based on certain criteria, develop an automatic way of classifying as usually a yes/no
 Broad Formula Definition : An algorithm that finds a trend within training data.  
@@ -35,3 +38,5 @@ The threshold of the above equation is important and is in this case the minimum
 3. Pick at random a misclassified x point where the sign with the weights
 does not agree with the y:
 <img src="https://latex.codecogs.com/svg.latex?sign({\color{Red}w_T}x)\neq{y_n}"/>
+
+</details>
