@@ -8,7 +8,7 @@ This serves as notes from various instructions that I have received.
 
 <details>
   <summary>Basic Learning Diagram</summary>
-<p align="center"><img width=40% src="https://https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Basic_Learning_Problem_Diagram.bmp"></p>
+<p align="center"><img width=40% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Basic_Learning_Problem_Diagram.bmp"></p>
 </details>
 https://github.com/hilsdsg3/Econometric_data/blob/master/meta_data/media/Bull_bear.jpg
 #### Linear Perceptron classification algorithm
