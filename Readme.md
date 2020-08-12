@@ -1,5 +1,4 @@
-## This readme is a few fundamental machine learning concepts.
-This serves as notes from various instructions that I have received.
+## Fundamental machine learning concepts from various sources
 
 ## Concept topics :
 - Basic Learning Diagram
@@ -13,7 +12,7 @@ This serves as notes from various instructions that I have received.
 
 <details>
   <summary>Linear Perceptron classification algorithm</summary>
-  
+
 #### Linear Perceptron classification algorithm
 Purpose : Based on certain criteria, develop an automatic way of classifying as usually a yes/no
 Broad Formula Definition : An algorithm that finds a trend within training data.  
@@ -39,4 +38,11 @@ The threshold of the above equation is important and is in this case the minimum
 does not agree with the y:
 <img src="https://latex.codecogs.com/svg.latex?sign({\color{Red}w_T}x)\neq{y_n}"/>
 
+</details>
+
+<details>
+  <summary>References</summary>
+- [Fundamentals of Machine Learning - Caltech CS156 taught by Dr. Abu-Mostofa](https://work.caltech.edu/telecourse)
+- [Machine Learning - Coursera - Andrew Ng](https://www.coursera.org/learn/machine-learning/home/welcome)
+- [Reinforcement Learning - UC Berkeley - Sergey Levine](https://www.youtube.com/watch?v=SinprXg2hUA&list=PLkFD6_40KJIwhWJpGazJ9VSj9CFMkb79A&index=1)
 </details>
