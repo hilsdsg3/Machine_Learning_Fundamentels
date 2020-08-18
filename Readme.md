@@ -7,7 +7,7 @@
 
 <details>
   <summary>Basic Learning Diagram</summary>
-<p align="left"><img width=80% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Basic_Learning_Problem_Diagram.png"></p>
+<p align="left"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Basic_Learning_Problem_Diagram.png"></p>
 </details>
 
 <details>
@@ -28,11 +28,11 @@ Yes/No - Credit approval
 ```
 
 In the following model diagram, the inputs are the criteria conditions for a Yes/no condition. As an example in credit approval. x1 may represent annual salary, x2 may represent credit length, and x3 may represent a past deliquency. Salary maybe more important than credit length so a factor is used for the inputs. Choosing the right importance or weights is the key to the perceptron algorithm. The weights are represented by the arrows. If these weights are adjusted correctly , the perceptron predicts the binary outcome , "yes" credit approval or "no" disapproval.      
-<p align="center"><img width=80% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram.png"></p>
+<p align="center"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram.png"></p>
 
 Mentioned earlier the training data becomes important for the perceptron to use as it modifies importance of the crteria as model weights. Then the perceptron algorithm is used to accurately predict the outcome of new data. This new data contains the characteristic conditions (x values) for approval/disapproval.
 
-<p align="center"><img width=80% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram2.png"></p>
+<p align="center"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram2.png"></p>
 </details>
 
 <details>
@@ -44,7 +44,7 @@ A new concept is the threshold or bias. This is defined as the minimum criteria 
 The bias is an input also but we don't or can't know the specific conditions for resulting in a yes/no. More description on the bias is folllowing.
 </p>
 
-<p align="center"><img width=80% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram3.png"></p>
+<p align="center"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram_detail3.png"></p>
 
 <p>
 
@@ -71,7 +71,7 @@ If sucessful , an accurate prediction is applied to new data. Then the perceptro
 
 </detail>
 
-<p align="center"><img width=40% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Credit_example.png"></p>
+<p align="center"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Credit_approval_example.png"></p>
 
 <p align="left">
 <img src="https://latex.codecogs.com/svg.latex?General\,Perceptron\,model\;=:f(x)=\left\{\begin{matrix}
@@ -91,7 +91,7 @@ Let's break this model down:
 
 <details>
 <summary>--- Perceptron magic</summary>
-<p align="center"><img width=40% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Magic_pic.png"></p>
+<p align="center"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Magic_pic.png"></p>
 
 <p>
 
@@ -115,11 +115,11 @@ w' = w + (error) * x
 </p>
 
 <p>
-You may ask what about the threashold / bias. I will intergrate that below.
+You may ask what about the threshold / bias. I will intergrate that below.
 At this point we do not have a good idea for the threshold/bias values but if up the problem differently the bias can be included in with the weights as another variable.
 </p>
 
-<p align="center"><img width=80% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram_detail4.png"></p>
+<p align="center"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram_detail4.png"></p>
 
 <p>
 
@@ -186,19 +186,14 @@ w_1 + e * 1 = 0 + 1 * 1 = 1 for w_1
 w_2 + e * x_1 = 0 + 1 * 1 = 1 for w_2
 w_3 + e * x_2 = 0 + 1 * 1 = 1 for w_3
 Resulting in w' = [1, 1, 1]
-This makes sense according to y=1 which is positive.
-In the above training data, x1 and x2 must be positive 
-together to output a 1 AND since y=1. One important note is 
-bias weight term can be updated by the perceptron but the 
-bias x term is always 1. The perceptron is activaed or postive when 
-the when the bias weight is 1. 
 ```
 
-Now we have the weights that will predict the first set but we need 
-to do some further work on tuning these weights to have 0 error or 
-successful prediction in all cases.
+This makes sense according to y=1 which is positive. In the above training data, x1 and x2 must be positive together to output a 1 AND since y=1. One important note is bias weight term can be updated by the perceptron but the bias x term is always 1. The perceptron is activaed or postive when the when the bias weight is 1.
+
+Now we have the weights that will predict the first set but we need to do some further work on tuning these weights to have 0 error or successful prediction in all cases.
 
 ```
+
 So we can continue with the updated weights : w = [1, 1, 1] but this time
 with the 2nd set of data.
 w    = [1, 1, 1] # updated weights
@@ -355,8 +350,8 @@ y    = 0
 f(x) = 0
 e    = 0                          # No Error!
 w    = w + 0x = [-2, 1, 2]
-
 ```
+
 <p>
 
 So in conclusion, after the weights were updated 12 times, we started with a default weight of [0, 0, 0] with the perceptron's assistance we now have a robust set of final weights = [-2, 1, 2]. These weights are correct for all cases of the any training data. Now this example was easily adjusted and used for simplistic terms so one could notice the changes in the weights. 
