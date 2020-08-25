@@ -6,7 +6,11 @@
 - Hoeffding's inequality
 
 <details>
+  <p>
+
   <summary>Basic Learning Diagram</summary>
+  </p>
+
 <p align="left"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Basic_Learning_Problem_Diagram.png"></p>
 </details>
 
@@ -16,7 +20,7 @@
 <summary>--- Background</summary>
 <p>
 
-One very basic machine learning classification method is called the Linear Perceptron which attempts to classify values and used for problems such as credit approval and disease detection. The perceptron uses certain criteria as x inputs and adjusts the importance of the criteria through traning data. Then it is used to predict based on the same criteria.
+One basic machine learning classification algorithim model is called the Linear Perceptron. The Linear Perceptron model attempts to classify values and result in a final linear equation. Some examples are basic credit approval and disease detection (malignent/benign). The perceptron uses certain criteria as x inputs and automatically adjusts the importance of the criteria based on traning data. Then the resulting perceptron algorithm is used to predict based on new instances of the same criteria for a binary result of yes/no.
 </p>
 
 ```
@@ -27,8 +31,8 @@ True/False - Disease detection (cancer or not), fraud detection
 Yes/No - Credit approval
 ```
 
-In the following model diagram, the inputs are the criteria conditions for a Yes/no condition. As an example in credit approval. x1 may represent annual salary, x2 may represent credit length, and x3 may represent a past deliquency. Salary maybe more important than credit length so a factor is used for the inputs. Choosing the right importance or weights is the key to the perceptron algorithm. The weights are represented by the arrows. If these weights are adjusted correctly , the perceptron predicts the binary outcome , "yes" credit approval or "no" disapproval.      
-<p align="center"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram.png"></p>
+In the following model diagram, the inputs are the criteria conditions for yes/no. As an example in credit approval,  x1 may represent annual salary, x2 may represent credit length, and x3 may represent a past deliquency. Salary maybe more important than credit length so a factor is used for the inputs. Choosing the right importance or weights is the key to the perceptron algorithm. The weights are represented by the arrows. If these weights are adjusted correctly , the perceptron predicts the binary outcome , "yes" credit approval or "no" disapproval.      
+<img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram.png"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram2.png">
 
 Mentioned earlier the training data becomes important for the perceptron to use as it modifies importance of the crteria as model weights. Then the perceptron algorithm is used to accurately predict the outcome of new data. This new data contains the characteristic conditions (x values) for approval/disapproval.
 
