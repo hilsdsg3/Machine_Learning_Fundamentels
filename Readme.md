@@ -74,8 +74,7 @@ If sucessful , an accurate prediction is applied to new data. Then the perceptro
 <p align="center"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Credit_approval_example.png"></p>
 
 <p align="left">
-<img src="https://latex.codecogs.com/svg.latex?General\,Perceptron\,model\;=:f(x)=\left\{\begin{matrix}
-1 & if \, w\cdot x > 0\\ 0 &\, otherwise \end{matrix}\right."/>
+<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/general_perceptron_model_equation.png"/>
 </p>
 
 Let's break this model down:
@@ -85,21 +84,23 @@ Let's break this model down:
 - If f(x) is 1 then update the weights.
 
 <p align="left">
-<img src="https://latex.codecogs.com/svg.latex?weighted\, sum\,=: w_T \cdot x = x_1*w_1+x_2*w_2+x_3*w_3....x_d*w_d"/>
+<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/weighted_sum_equation.png.png"/>
 </p>
 </details>
 
 <details>
 <summary>--- Perceptron magic</summary>
-<p align="center"><img width=35% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Magic_pic.png"></p>
+<p align="center"><img width=30% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Magic_pic.png"></p>
 
 <p>
 
 The real magic comes when the perceptron updates the weights. The weights are updated in the following equation. There is an error term and that is difference in the true decision and the percieved decision : y - f(x). For each row of training data there are two sets of values : The x values and the result true y values. The y values are true because this is the true outcome of the criteria. That is why it is crucial to do an exploratory data analysis on your training data. If one data point is truely misclassified that one data point is going to skew the final weights.
 </p>
+
 <p align="left">
 <img src="https://latex.codecogs.com/svg.latex?Update\,\,equation\,\,=:\,w' = w\,+\,error\,*\,x=w +\,(y - f(x))\,x"/>
 </p>
+
 <p align="left">
 <img src="https://latex.codecogs.com/svg.latex?Error\,\,equation\,\,=:\,error = y\,-\,f(x)"/>
 </p>
@@ -109,10 +110,6 @@ Variables :
 y =: real decision yes/no
 f(x) =: perceptron/perceived decision
 w =: weights
-
-Equations : 
-error = y - f(x)
-w' = w + (error) * x
 ```
 
 <p align="left">
