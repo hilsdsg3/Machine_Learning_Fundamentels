@@ -34,12 +34,11 @@ Yes/No - Credit approval
 In the following model diagram, the inputs are the criteria conditions for yes/no. As an example in credit approval,  x1 may represent annual salary, x2 may represent credit length, and x3 may represent a past deliquency. Salary maybe more important than credit length so a factor is used for the inputs. Choosing the right importance or weights is the key to the perceptron algorithm. The weights are represented by the arrows. If these weights are adjusted correctly , the perceptron predicts the binary outcome , "yes" credit approval or "no" disapproval.      
 
 <p float="left">
-<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram.png" width='100'><img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram2.png" width='100'>
+<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram.png" width='500'><img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram2.png" width='500'>
 </p>
 
 Mentioned earlier the training data becomes important for the perceptron to use as it modifies importance of the crteria as model weights. Then the perceptron algorithm is used to accurately predict the outcome of new data. This new data contains the characteristic conditions (x values) for approval/disapproval.
 
-<p align="center"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram2.png"></p>
 </details>
 
 <details>
