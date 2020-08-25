@@ -34,7 +34,7 @@ Yes/No - Credit approval
 In the following model diagram, the inputs are the criteria conditions for yes/no. As an example in credit approval,  x1 may represent annual salary, x2 may represent credit length, and x3 may represent a past deliquency. Salary maybe more important than credit length so a factor is used for the inputs. Choosing the right importance or weights is the key to the perceptron algorithm. The weights are represented by the arrows. If these weights are adjusted correctly , the perceptron predicts the binary outcome , "yes" credit approval or "no" disapproval.      
 
 <p float="left">
-<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram.png" width='350'><img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram2.png" width='350'>
+<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram.png" width='300'><img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram2.png" width='300'>
 </p>
 
 Mentioned earlier the training data becomes important for the perceptron to use as it modifies importance of the crteria as model weights. Then the perceptron algorithm is used to accurately predict the outcome of new data. This new data contains the characteristic conditions (x values) for approval/disapproval.
@@ -96,16 +96,6 @@ If the perceptron finds a classification or a line that separates the training d
 <p align="center"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Credit_approval_example.png"></p>
 
 <p align="left">
-<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/general_perceptron_model_equation.png"/>
-</p>
-
-Let's break this model down:
-- f(x) represents predicted output of the perception
-- The weights (w) multiplied by the critera (x). That result is compared with 0.
-- If the result is greater than 0 , f(x) is 1. If not then f(x) is 0.
-- If f(x) is 1 then update the weights.
-
-<p align="left">
 <img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/weighted_sum_equation.png.png"/>
 </p>
 </details>
@@ -120,7 +110,7 @@ The key to the perceptron is updating the weights to obtain the classification l
 </p>
 
 <p float="left">
-<img src="ttps://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_update_equation.png.png" width='350'><img src="ttps://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_update_error_equation.png.png" width='350'>
+<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_update_equation.png.png" width='300'><img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_update_error_equation.png.png" width='300'>
 </p>
 
 
