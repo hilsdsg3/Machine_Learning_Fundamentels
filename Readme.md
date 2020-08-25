@@ -96,7 +96,7 @@ If the perceptron finds a classification or a line that separates the training d
 <p align="center"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Credit_approval_example.png"></p>
 
 <p align="left">
-<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/weighted_sum_equation.png.png"/>
+<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/weighted_sum_equation.svg"/>
 </p>
 </details>
 
@@ -110,15 +110,17 @@ The key to the perceptron is updating the weights to obtain the classification l
 </p>
 
 <p float="left">
-<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_update_equation.png.png" width='300'><img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_update_error_equation.png.png" width='300'>
+<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_update_equation.svg" width='250'><img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_error_equation.svg" width='250'>
 </p>
 
 
 ```
 Variables :
-y =: real decision yes/no
-f(x) =: perceptron/perceived decision
-w =: weights
+y =: Accurate classification of the training data set, real decision , yes/no
+f(x) =: perceptron/perceived classification of each set of training data
+w =: original weights
+w' =: Weights update equation
+error =: Difference of the Accurate classification and perceptron classification 
 ```
 
 <p align="left">
