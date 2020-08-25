@@ -42,20 +42,35 @@ Mentioned earlier the training data becomes important for the perceptron to use 
 </details>
 
 <details>
-<summary>--- Overview on the Perceptron Algorthim</summary>
+<summary>--- Perceptron Algorthim Overview</summary>
+
 <p>
 
-The following diagram shows the inputs as x variables and the weights, rather the importance of the inputs.
-A new concept is the threshold or bias. This is defined as the minimum criteria for a Yes or True result.
-The bias is an input also but we don't or can't know the specific conditions for resulting in a yes/no. More description on the bias is folllowing.
+The general model equation evaluates each set of data and classifies then result as a +1 or 0. These classifications can easily be changed to a +1/-1 instead of 1/0 but they must always be binary , either one or the other.  
+
+<p align="left">
+<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/general_perceptron_model_equation.png"/>
+</p>
+
+<p>
+Let's break this model down further:
+- f(x) represents predicted output of the perception
+- The weights (w) multiplied by the critera (x). That result is compared with 0.
+- If the result is greater than 0 , f(x) is 1. If not then f(x) is 0.
+- If f(x) is 1 then update the weights.
+</p>
+
+<p>
+
+The following diagram shows the inputs as x variables and the weights or the importance of the inputs.
+A new concept that is shown is the threshold or bias. This threshold is defined as the minimum criteria for a Yes or True result. But we can't know for sure what the conditions are for a Yes / True.
 </p>
 
 <p align="center"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram_detail3.png"></p>
 
 <p>
 
-Before we dive into the way the algorithm works let use a conceptual example of **Credit approval**.
-The input criteria are items such as salary, previous deliquences, and credit history. These inputs are cast x_1,...,x_d. The weights would be the importance of each x criteria. The bias / threshold is the minimum criteria to approve/disapprove credit.
+Let use a conceptual example of **Credit approval**. The input criteria (x) are items such as salary, previous deliquences, and credit history. These inputs are cast x_1,...,x_d. The weights would be the importance of each x criteria. The bias / threshold is the minimum criteria to approve/disapprove credit.
 
 </p>
 
@@ -70,10 +85,11 @@ w1 = 4 : Salary , most significant
 w2 = 3 : Previous deliquencies
 w3 = 2 : Credit history , least significant
 
-Bias = 3 : Minimal criteria for credit approval
+Threshold = 3 : Minimal criteria for credit approval
 ```
-While training the perceptron seeks to find the optimal weights and the bias term.
-If sucessful , an accurate prediction is applied to new data. Then the perceptron has done it's job.
+The key to most algorithms including this one is the automatic adjustments of the weights and the threshold. 
+The perceptron adjusts the weights based off of training data. This training data is pre-determined to be True/False.
+If the perceptron finds a classification or a line that separates the training data into True/False, we have met our goal. Then an accurate prediction is applied to new data for classifying it into True/False using the new classification line.
 
 </detail>
 
@@ -100,16 +116,13 @@ Let's break this model down:
 
 <p>
 
-The real magic comes when the perceptron updates the weights. The weights are updated in the following equation. There is an error term and that is difference in the true decision and the percieved decision : y - f(x). For each row of training data there are two sets of values : The x values and the result true y values. The y values are true because this is the true outcome of the criteria. That is why it is crucial to do an exploratory data analysis on your training data. If one data point is truely misclassified that one data point is going to skew the final weights.
+The key to the perceptron is updating the weights to obtain the classification line. The weights are updated in the following equation. There is an error term and that is difference in the true decision and the percieved decision : y - f(x). For each row of training data there are two sets of values : The x values and the result true y values. The y values are true because this is the true outcome of the criteria. That is why it is crucial to do an exploratory data analysis on your training data. If one data point is truely misclassified that one data point is going to skew the final weights.
 </p>
 
-<p align="left">
-<img src="https://latex.codecogs.com/svg.latex?Update\,\,equation\,\,=:\,w' = w\,+\,error\,*\,x=w +\,(y - f(x))\,x"/>
+<p float="left">
+<img src="ttps://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_update_equation.png.png" width='350'><img src="ttps://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_update_error_equation.png.png" width='350'>
 </p>
 
-<p align="left">
-<img src="https://latex.codecogs.com/svg.latex?Error\,\,equation\,\,=:\,error = y\,-\,f(x)"/>
-</p>
 
 ```
 Variables :
