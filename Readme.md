@@ -31,13 +31,13 @@ True/False - Disease detection (cancer or not), fraud detection
 Yes/No - Credit approval
 ```
 
-In the following model diagram, the inputs are the criteria conditions for yes/no. As an example in credit approval,  x1 may represent annual salary, x2 may represent credit length, and x3 may represent a past deliquency. Salary maybe more important than credit length so a factor is used for the inputs. Choosing the right importance or weights is the key to the perceptron algorithm. The weights are represented by the arrows. If these weights are adjusted correctly , the perceptron predicts the binary outcome , "yes" credit approval or "no" disapproval.      
+On the left the model diagram, the inputs are denoted with an x and they are defined as the criteria conditions for yes/no. As an example is credit approval,  x1 may represent annual salary, x2 may represent credit length, and x3 may represent past deliquencies. Salary maybe more important than credit length so a factor is used for the inputs. Choosing the right importance or weights is the key to the perceptron algorithm. The weights are represented by the arrows. If these weights are adjusted correctly , the perceptron predicts the binary outcome , "yes" credit approval or "no" disapproval.      
 
 <p float="left">
 <img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram.png" width='300'><img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram2.png" width='300'>
 </p>
 
-Mentioned earlier the training data becomes important for the perceptron to use as it modifies importance of the crteria as model weights. Then the perceptron algorithm is used to accurately predict the outcome of new data. This new data contains the characteristic conditions (x values) for approval/disapproval.
+To make the algorithm effective, training data becomes important to use as the algorithm modifies the importance or weights the characteristic conditions. Then the perceptron algorithm is used to accurately predict the outcome of new data. This new data contains the characteristic conditions and with the final percepton algorithm the result is an accurate approval/disapproval.
 
 </details>
 
@@ -46,24 +46,26 @@ Mentioned earlier the training data becomes important for the perceptron to use 
 
 <p>
 
-The general model equation evaluates each set of data and classifies then result as a +1 or 0. These classifications can easily be changed to a +1/-1 instead of 1/0 but they must always be binary , either one or the other.  
+The general model equation evaluates each training set of data and classifies them result as a +1 or 0. These classifications can easily be changed to a +1/-1 instead of 1/0 but they must always be binary , either one or the other.  
 
 <p align="left">
-<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/general_perceptron_model_equation.png"/>
+<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/general_perceptron_model_equation.svg"/>
 </p>
 
 <p>
+```
 Let's break this model down further:
 - f(x) represents predicted output of the perception
 - The weights (w) multiplied by the critera (x). That result is compared with 0.
 - If the result is greater than 0 , f(x) is 1. If not then f(x) is 0.
 - If f(x) is 1 then update the weights.
+```
 </p>
 
 <p>
 
 The following diagram shows the inputs as x variables and the weights or the importance of the inputs.
-A new concept that is shown is the threshold or bias. This threshold is defined as the minimum criteria for a Yes or True result. But we can't know for sure what the conditions are for a Yes / True.
+A new concept that is shown is the threshold or bias. This threshold is defined as the minimum criteria for a Yes or True result. All of these weights and the threshold is given an initial number for the perceptron to modify. The threshold initial number does not have to be correct because the perceptron will automatically converge on a final value.
 </p>
 
 <p align="center"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram_detail3.png"></p>
@@ -106,13 +108,16 @@ If the perceptron finds a classification or a line that separates the training d
 
 <p>
 
-The key to the perceptron is updating the weights to obtain the classification line. The weights are updated in the following equation. There is an error term and that is difference in the true decision and the percieved decision : y - f(x). For each row of training data there are two sets of values : The x values and the result true y values. The y values are true because this is the true outcome of the criteria. That is why it is crucial to do an exploratory data analysis on your training data. If one data point is truely misclassified that one data point is going to skew the final weights.
+The key to the perceptron is updating the weights in the following equation to obtain the accurate classification line. The error term is the difference in the true decision and the percieved decision : y - f(x). For each set of training data there are two sets of values : The x values and the result true y values. The y values are true because this is the true outcome of the criteria. That is why it is crucial to do an exploratory data analysis on your training data. If one data point is truely misclassified that one data point is going to skew the final weights.
 </p>
 
 <p float="left">
-<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_update_equation.svg" width='250'><img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_error_equation.svg" width='250'>
+<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_update_equation.svg" width='250'>
 </p>
 
+<p float="left">
+<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_error_equation.svg" width='250'>
+</p>
 
 ```
 Variables :
@@ -122,24 +127,13 @@ w =: original weights
 w' =: Weights update equation
 error =: Difference of the Accurate classification and perceptron classification 
 ```
-
-<p align="left">
-<img src="https://latex.codecogs.com/svg.latex?Perceptron\,\, neurons\;=:output=\left\{\begin{matrix}
--1 & if \, \sum _jw_jx_j\leq threshold\\ 1 & if \, \sum _jw_jx_j> threshold \end{matrix}\right."/>
-</p>
-
 <p>
-You may ask what about the threshold / bias. I will intergrate that below.
-At this point we do not have a good idea for the threshold/bias values but if up the problem differently the bias can be included in with the weights as another variable.
+Thre following diagram makes programming easier. The criteria inputs are x1 and x2. Although, now we have moved the threshold into the inputs as a 1. Remember this threashold was the MIN for a True/Yes condition. By moving the threshold to the inputs, the flexibility in adjusting the threshold weight is clear and done by the perceptron. The threshold term (x*w) may indeed be a 0 because of the weight (1*0=0). But let the perceptron determine that from the training data.
 </p>
 
 <p align="center"><img width=60% src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/Perceptron_diagram_detail4.png"></p>
 
-<p>
-
-The above diagram has two criteria for simplicity purposes but the diagram adds in the bias term to the inputs.
-The x input for the bias is always 1. The weight for the bias may change to whatever the perceptron finalizes. The x component to the bias term is always a 1 because the bias term is either on or off depending on the bias weight.
-Including the bias term in the x components will make cleaner coding.  
+  
 
 </details>
 
