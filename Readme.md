@@ -112,7 +112,7 @@ The key to the perceptron is updating the weights in the following equation to o
 </p>
 
 <p float="left">
-<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_update_equation.svg" width='250'>
+<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_update_equation.svg" width='300'>
 </p>
 
 <p float="left">
@@ -121,11 +121,11 @@ The key to the perceptron is updating the weights in the following equation to o
 
 ```
 Variables :
-y =: Accurate classification of the training data set, real decision , yes/no
-f(x) =: perceptron/perceived classification of each set of training data
-w =: original weights
-w' =: Weights update equation
-error =: Difference of the Accurate classification and perceptron classification 
+y = Accurate classification of the training data set, real decision , yes/no
+f(x) = perceptron/perceived classification of each set of training data
+w = original weights
+w' = weight update
+error = Difference of the Accurate classification and perceptron classification 
 ```
 <p>
 Thre following diagram makes programming easier. The criteria inputs are x1 and x2. Although, now we have moved the threshold into the inputs as a 1. Remember this threashold was the MIN for a True/Yes condition. By moving the threshold to the inputs, the flexibility in adjusting the threshold weight is clear and done by the perceptron. The threshold term (x*w) may indeed be a 0 because of the weight (1*0=0). But let the perceptron determine that from the training data.
@@ -141,24 +141,24 @@ Thre following diagram makes programming easier. The criteria inputs are x1 and 
 <summary>--- Perceptron learning steps</summary>
 <p>
 
-1. Initialize the weights, often randomly or set them with an initial value of 0
-```
-Training data :
-x1    x2  |   y
----- ---- | ----
- 1     1  |   1    : first set
- 1     0  |   0    : second set
- 0     1  |   0    : third set
- 0     0  |   0    : fourth set
-```
+- The goal is to correctly predict the y column with zero error.
 
+- Initialize the weights, often randomly or set them with an initial value of 0
 ```
 Initialize the weights :
 w = [0, 0, 0] # [bias, weight, weight]
-```
 
-2. For each set of inputs in the set of training examples our perceptron will :
-Predict and output , compare it to the expected output , update its weights, if 
+We are given a training set with three different input (threshold-x0,x1,x2)
+Training data :
+ x0   x1   x2  |   y
+---- ---- ---- | ----
+ 1    1     1  |   1    : first set
+ 1    1     0  |   0    : second set
+ 1    0     1  |   0    : third set
+ 1    0     0  |   0    : fourth set
+```
+- For each set of inputs in the set of training examples our perceptron will :
+Predict and output a 1/0, compare it to the expected output , update its weights, if 
 the expected output does not equal the actual output and move to the next set of inputs.
 Further concepts : 
 - We can define how well the perceptron is performing on the known training set data by the error (e).
@@ -180,30 +180,29 @@ As the perceptron cycles through the training data rows, a w' results.
 w' = w + (error) * x
 ```
 
-Let's go through one iteration of updating the weight.
+Let's go through one iteration of updating the weights.
 
 ```
+1. Intialize the weights
 If intial w = [0, 0, 0] and bias,x1,x2 = [1, 1, 1] where y=1
 then f(x) = 1 if w dot x > 0
+
+2. Apply the weighted sum equation
 = (0 * 1) + (0 * 1) + (0 * 1) = 0 when y=1
 Therefore e = y - f(x) = 1
-```
 
-```
+3. Apply the update w' equation
 w_1 + e * 1 = 0 + 1 * 1 = 1 for w_1
 w_2 + e * x_1 = 0 + 1 * 1 = 1 for w_2
 w_3 + e * x_2 = 0 + 1 * 1 = 1 for w_3
 Resulting in w' = [1, 1, 1]
 ```
 
-This makes sense according to y=1 which is positive. In the above training data, x1 and x2 must be positive together to output a 1 AND since y=1. One important note is bias weight term can be updated by the perceptron but the bias x term is always 1. The perceptron is activaed or postive when the when the bias weight is 1.
-
 Now we have the weights that will predict the first set but we need to do some further work on tuning these weights to have 0 error or successful prediction in all cases.
 
 ```
-
-So we can continue with the updated weights : w = [1, 1, 1] but this time
-with the 2nd set of data.
+Starting with these weights [1, 1, 1] but this time
+with the 2nd set of data istead of the 1st set.
 w    = [1, 1, 1] # updated weights
 x    = [1, 1, 0] # 2nd set of data
 y    = 0
@@ -362,32 +361,34 @@ w    = w + 0x = [-2, 1, 2]
 
 <p>
 
-So in conclusion, after the weights were updated 12 times, we started with a default weight of [0, 0, 0] with the perceptron's assistance we now have a robust set of final weights = [-2, 1, 2]. These weights are correct for all cases of the any training data. Now this example was easily adjusted and used for simplistic terms so one could notice the changes in the weights. 
+So in conclusion, after the weights were updated 12 times, we arrive at the final weight [-2, 1, 2]. We started with a default weight of [0, 0, 0] with the perceptron's assistance we now have a robust set of final weights. These weights are correct for all cases of the any training data. Now this example was easily adjusted and used for simplistic terms so one could notice the changes in the weights. 
  </p>
 
 </details>
 
 <details>
-<summary>--- More concepts</summary>
+<summary>--- Additional  concepts</summary>
 <p>
 
 **There are three additional concepts that need explaining.**
 </p>
 
 <p>
-Epoch is the number of times we’ve iterated through the entire training set. So for the example above, during epoch = 12, we were able to establish weights to classify all of our inputs, but we continued iterating, to be sure that our weights were tried on all of our inputs.
+Epoch is the number of times we’ve iterated through the entire training set. So for the example above, during we only ran the training data two times through. In the real world we have several input sets so it is necessary to have at least as many Epochs for the perceptron to converge on a solution.
 </p>
 <p>
 
-Threshold is different than what we now call our bias. Threshold is the maximum number of epoch we will allow to pass while training. There is not built in stopping point of our algorithm. It will continue adding 0 to our weights, on and on, forever. Adding a threshold is one way of stopping our training loop.
+Threshold is different than what we now call our bias. Threshold is the maximum number of epochs we will allow to pass while training. There is not a built in stopping point of our algorithm. Adding a threshold is one way of stopping our training loop.
 </p>
 
 <p>
 
-Learning rate, symbolized by α, is the magnitude at which we increase or decrease our weights during each iteration of training. So a slight modification to the weight update equation.
+Learning rate, symbolized by α, is the magnitude at which we increase or decrease our weights during each iteration of training. So the alpha is multipled by the error an the x as the following equation. The manual example above does not demostrate this too clearly but the learning rate number is flexible so that if you choose 0.2 or 0.3 , the perceptron is going to converge. Generally, set the learning rate to 20% of the x range.
 </p>
 
-<img src="https://latex.codecogs.com/svg.latex?w' = w + {\color{Red} \alpha} \,(y - f(x))\,x"/>
+<p float="left">
+<img src="https://github.com/hilsdsg3/Machine_Learning_Fundamentels/blob/master/meta_data/linear_perceptron_updated_update_equation.svg" width='250'>
+</p>
 
 </details>
 
